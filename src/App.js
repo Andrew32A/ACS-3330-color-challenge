@@ -39,7 +39,9 @@ function App() {
             className="colorSwatch"
             style={{ backgroundColor: color }}
             onClick={() => handleSwatchClick(color)}
-          ></div>
+          >
+            {message && <span className="colorSwatchSpan">{color}</span>}{" "}
+          </div>
         ))}
       </div>
       <p>Click the swatch that matches: {targetColor}</p>
