@@ -15,8 +15,13 @@
 }
 
 .colorSwatch {
-  display: inline-block;
   width: 100px;
   height: 100px;
   border: 1px solid black;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.colorSwatch:hover {
+  transform: scale(1.1);
 }
