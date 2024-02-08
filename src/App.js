@@ -44,7 +44,9 @@ function App() {
       </div>
       <p>Click the swatch that matches: {targetColor}</p>
       <p>{message}</p>
-      <button onClick={resetGame}>Play Again</button>
+      <button className="playAgainButton" onClick={resetGame}>
+        Play Again
+      </button>
     </div>
   );
 }

@@ -25,3 +25,17 @@
 .colorSwatch:hover {
   transform: scale(1.1);
 }
+
+.playAgainButton {
+  width: 250px;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.playAgainButton:hover {
+  transform: scale(1.05);
+}
