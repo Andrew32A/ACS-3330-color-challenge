@@ -36,6 +36,10 @@
   font-size: 1em;
 }
 
+.correctSwatch {
+  border: 2.5px solid red;
+}
+
 .playAgainButton {
   width: 250px;
   border-radius: 10px;

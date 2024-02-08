@@ -5,6 +5,7 @@ function App() {
   const [colors, setColors] = useState([]);
   const [targetColor, setTargetColor] = useState("");
   const [message, setMessage] = useState("");
+  const [selectedColor, setSelectedColor] = useState("");
 
   useEffect(() => {
     resetGame();
@@ -19,10 +20,11 @@ function App() {
     setColors(newColors);
     setTargetColor(newColors[Math.floor(Math.random() * newColors.length)]);
     setMessage("");
+    setSelectedColor("");
   };
 
   const handleSwatchClick = (color) => {
-    console.log("Color of swatch clicked: ", color);
+    setSelectedColor(color);
     if (color === targetColor) {
       setMessage("Correct!");
     } else {
@@ -36,11 +38,15 @@ function App() {
         {colors.map((color, index) => (
           <div
             key={index}
-            className="colorSwatch"
+            className={`colorSwatch ${
+              message === "Incorrect :(" && color === targetColor
+                ? "correctSwatch"
+                : ""
+            }`}
             style={{ backgroundColor: color }}
             onClick={() => handleSwatchClick(color)}
           >
-            {message && <span className="colorSwatchSpan">{color}</span>}{" "}
+            {message && <span className="colorSwatchSpan">{color}</span>}
           </div>
         ))}
       </div>
